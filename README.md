@@ -3,18 +3,77 @@
 This repository contains contains scripts and notes for understanding the various aspects of Deep Learning. The scripts are written using TensorFlow, which is an open source machine learning framework.
 
 ## Installing TensorFlow
-TensorFlow can be installed by following the directions given [here](https://www.tensorflow.org/install). They recommend installing everything through a python virtual environment.
+The system requirements for intalling TensorFlow are available [here](https://www.tensorflow.org/install). The instructions below use Python 2.7 and pip. If you prefer using Python 3, or the Anaconda packages instead of the TensorFlow-provided pip package, you can use the alternate instructions detailed [here](https://www.tensorflow.org/install).
 
-To test the installation, try running the following scripts:
+1. Check if your Python environment is already configured:
+   
+        $ python --version
+        $ pip --version
+        $ virtualenv --version
+        
+   If any of these packages are not installed, then you can follow the instructions given [here](https://www.tensorflow.org/install) to install them.
+   
+2. Go the the home directory of this tuturial. Create a new virtual environment by choosing a Python interpreter and making a `./dl_venv` directory to hold it:  
 
-* If you intend to use Jupyter Notebook (which is what I will be using for the course), run the file `Test_Install/test_tf.ipynb` interactively from the Jupyter environment. Instructions to install Jupyter Notebook are available [here](https://jupyter.org/install). You can find instructions on how to use Jupyter notebook inside a virtual environment over [here](https://anbasile.github.io/programming/2017/06/25/jupyter-venv/).
+        $ virtualenv --system-site-packages -p python2.7 ./dl_venv   
+        
+3. Activate the virtual environment:
+              
+        $ source ./dl_venv/bin/activate
+        
+   We can now install packages without effecting the host system setup. Note that when the virtual environment is active, your shell prompt is prefixed with `(dl_venv)`
 
-* If you intend to run python scripts directly from the terminal, test the install by running the following command from the parent directory (assuming your virtual environment is already active)
+4. Upgrade `pip`:
 
-		python Test_Install/test_tf.py
-		
-		
+        (dl_venv) $ pip install --upgrade pip        
+        
+5. Install TensorFlow in the virtual environment:
+
+		 (dl_venv) $ pip install --upgrade tensorflow
+		 
+6. We will also need `matplotlib` for plotting in Python. So install this using: 
+
+		 (dl_venv) $ pip install matplotlib		        
+7. You can list all the packages installed in the virtual environment using:
+
+		 (dl_venv) $ pip list
+		 
+8. Test the installation by running a test script:
+
+		 (dl_venv) $ python Test_Install/test_tf.py
+		 
+	If the code runs and displays `Script was run successfully!!`, then everything has been correctly installed.
 	
+9. The virtual environment can be exited using:
+
+        (dl_venv) $ deactivate 	
+        
+### Installing Jupyter
+
+I plan to use Jupyter Notebook for the practical sessions. If you wish to do the same, you can install Jupyter using:
+
+    $ python -m pip install --upgrade pip
+    $ python -m pip install jupyter  
+You can also install Jupyter using Anaconda by following the instruction [here](https://jupyter.org/install.html).	    
+     
+
+To use Jupyter inside `dl_venv`, first activate the virtual environment and install the ipython kernal using `pip`:
+    
+    (dl_venv) $ pip install ipykernel
+   
+Now install a new kernal:
+
+    (dl_venv) $ ipython kernel install --user --name=dl_venv
+   
+Note that we give the kernal the same name as the virtual envirnoment, although this is not necessary. At this point, you can start Jupyter
+   
+    (dl_venv) $ jupyter notebook
+
+To test whether Jupyter is able to load and use TensorFlow, open and run the script `Test_Install/test_tf.ipynb`.      
+        
+ 
+		
+		
 		
 
 ## Deep learning resources

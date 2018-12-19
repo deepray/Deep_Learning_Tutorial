@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # TensorFlow and tf.keras
 import tensorflow as tf
 from tensorflow import keras
@@ -15,7 +12,9 @@ import matplotlib.pyplot as plt
 plt.figure(figsize=(10,10))
 x = np.linspace(0,1,100)
 plt.plot(x,np.sin(4*np.pi*x))
-plt.show()
+plt.show(block=False)
+plt.pause(2)
+plt.close()
 
 
 # Test training
