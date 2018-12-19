@@ -18,5 +18,8 @@ To test the installation, create a virtual environment by choosing a Python inte
 ## Deep learning resources
 
 *  [Deep Learning Book](https://www.deeplearningbook.org/) by Goodfellow, Bengio and Courville. This is a good book for beginners and looks are the various components needed to build and train neural networks.
+*  Various [keywords](http://www.wildml.com/deep-learning-glossary/) used by people working with machine learning.
 *  [TensorFlow tutorial](https://www.tensorflow.org/tutorials/).
 *  The 5 part Deep Learning Specialization course offered on [Coursera](https://www.coursera.org/specializations/deep-learning), taught by Andrew NG and other experts in the field.
+*  [Notes](https://stats385.github.io/cheat_sheet) and [slides](https://stats385.github.io/lecture_slides) from the Deep Learning course taught at Standford.
+*  Many, many other blogs and basic tutorials put up by others ...
