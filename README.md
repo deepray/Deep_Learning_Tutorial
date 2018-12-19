@@ -9,9 +9,11 @@ To test the installation, try running the following scripts:
 
 * If you intend to use Jupyter Notebook (which is what I will be using for the course), run the file `Test_Install/test_tf.ipynb` interactively from the Jupyter environment. Instructions to install Jupyter Notebook are available [here](https://jupyter.org/install). You can find instructions on how to use Jupyter notebook inside a virtual environment over [here](https://anbasile.github.io/programming/2017/06/25/jupyter-venv/).
 
-* If you intend to run python scripts directly from the terminal, test the install by running the following command from the parent directory
+* If you intend to run python scripts directly from the terminal, test the install by running the following command from the parent directory (assuming your virtual environment is already active)
 
 		python Test_Install/test_tf.py
+		
+		
 	
 		
 
